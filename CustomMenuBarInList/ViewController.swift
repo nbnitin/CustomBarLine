@@ -113,7 +113,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             return
         }
         if didSelectTapped {
-            didSelectTapped = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                self.didSelectTapped = false
+            })
             return
         }
         
