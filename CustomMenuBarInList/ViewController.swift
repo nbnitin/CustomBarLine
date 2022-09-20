@@ -113,9 +113,10 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
             return
         }
         if didSelectTapped {
+            didSelectTapped = false
             return
         }
-        didSelectTapped = false
+        
         if index > currentIndex {
             if index.row - 2 >= 0 && listViewCollectionView.indexPathsForVisibleItems.contains(IndexPath(row:index.row - 2,section: 0)) == false {
                 listViewCollectionView.scrollToItem(at: IndexPath(row:index.row - 2,section: 0), at: .left, animated: true)
